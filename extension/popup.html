@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreatScope- Security and Threat Analysis Toolkit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+      width: 500px;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      color: #212529;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 14px 20px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 15px;
+      width: 100%;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    h3, h4 {
+      margin-bottom: 10px;
+      color: #1c1c1c;
+      font-size: 18px;
+    }
+    .secure {
+      color: #28a745;
+    }
+    .insecure {
+      color: #dc3545;
+    }
+    .form-block {
+      background: #ffffff;
+      border: 1px solid #dee2e6;
+      padding: 14px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .note {
+      color: #721c24;
+      background: #f8d7da;
+      padding: 12px;
+      border-left: 6px solid #f5c6cb;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    pre {
+      background: #f1f3f5;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 14px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    #loadingSpinner {
+      display: none;
+      text-align: center;
+      margin: 30px 0;
+    }
+    #loadingSpinner img {
+      width: 60px;
+    }
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 20px 0 10px;
+      color: #343a40;
+    }
+    #results, #securityReport {
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      text-align: center;
+      color: #6c757d;
+    }
+    .icon-button {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center; color:#007BFF;">🔐 ThreatScope</h2>
+  <p style="text-align:center; font-size:14px; margin-bottom: 20px;">Security & Threat Analysis Toolkit</p>
+
+  <button id="analyzeButton" class="icon-button">🔍 Analyze Page</button>
+  <button id="captureButton" class="icon-button">📸 Capture Screen & Analyze</button>
+  <button id="printButton" class="icon-button">🖨️ Print / Save Report</button>
+
+  <div id="loadingSpinner">
+    <img src="https://media1.tenor.com/m/18VaUqVtArwAAAAC/loading-buffering.gif" alt="Loading...">
+    <p>Analyzing... please wait.</p>
+  </div>
+
+  <div id="results"></div>
+  <div id="securityReport"></div>
+
+  <div class="footer">
+    <p>Made with ❤️ by Viral Vaghela</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
